@@ -178,8 +178,8 @@ public abstract class ColoredSquaresModuleBase : MonoBehaviour
         var indexes = new List<int?>((behaviour == SquaresToRecolor.NonwhiteOnly
             ? Enumerable.Range(0, 16).Where(ix => colors[ix] != SquareColor.White)
             : behaviour == SquaresToRecolor.NonblackOnly
-            ? Enumerable.Range(0, 16).Where(ix => colors[ix] != SquareColor.Black)
-            : Enumerable.Range(0, 16)).Select(i => (int?) i));
+                ? Enumerable.Range(0, 16).Where(ix => colors[ix] != SquareColor.Black)
+                : Enumerable.Range(0, 16)).Select(i => (int?) i));
         if (!unshuffled)
             indexes.Shuffle();
         if (delay)
