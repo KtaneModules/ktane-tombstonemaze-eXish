@@ -173,7 +173,7 @@ public sealed class TombstoneMazeModule : ColoredSquaresModuleBase
         if (dir == 3 && (MazeDirections(_pawnPositionHidden, true) & 8) != 0 && _opponentPositionHidden != _pawnPositionHidden - 1)
             _pawnPositionHidden -= 1;
 
-        Log("After your {0} move, you are at {0} (visible) and {1} (hidden).", new[] { "first", "second", "third" }[n + 1], _pawnPosition, _pawnPositionHidden);
+        Log("After your {0} move, you are at {1} (visible) and {2} (hidden).", new[] { "first", "second", "third" }[n], _pawnPosition, _pawnPositionHidden);
     }
 
     private void EnemyMove()
@@ -216,7 +216,7 @@ public sealed class TombstoneMazeModule : ColoredSquaresModuleBase
             if (dir == 3 && (MazeDirections(_opponentPositionHidden, true) & 8) != 0 && _opponentPositionHidden != _pawnPositionHidden + 1)
                 _opponentPositionHidden -= 1;
 
-            Log("After its {0} move, the enemy is at {0} (visible) and {1} (hidden).", new[] { "first", "second", "third" }[step + 1], _opponentPosition, _opponentPositionHidden);
+            Log("After its {0} move, the enemy is at {1} (visible) and {2} (hidden).", new[] { "first", "second", "third" }[step], _opponentPosition, _opponentPositionHidden);
         }
 
         StartSquareColorsCoroutine(squares);
