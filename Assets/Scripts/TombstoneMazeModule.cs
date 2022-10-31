@@ -292,7 +292,7 @@ public sealed class TombstoneMazeModule : ColoredSquaresModuleBase
         {
             SquareColor[] squares = Enumerable.Repeat(SquareColor.Red, 16).ToArray();
             StartSquareColorsCoroutine(squares);
-            Log("You dug in direction {0} and there is a wall there.", new[] { "up", "right", "down", "left" }[dir]);
+            Log("You dug position {0} and there is a wall there.", dugix);
             EnemyDig(squares);
         }
         else
@@ -307,7 +307,7 @@ public sealed class TombstoneMazeModule : ColoredSquaresModuleBase
                 ModulePassed();
                 return;
             }
-            Log("You dug in direction {0} and there is no wall there.", new[] { "up", "right", "down", "left" }[dir]);
+            Log("You dug position {0} and there is no wall there.", dugix);
             EnemyDig(squares);
         }
     }
